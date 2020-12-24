@@ -30,7 +30,7 @@ header a:hover, .section-8 a:hover {
 
 .section-3, .section-6 {
   background-attachment: fixed;
-  background-image: url(/dist/imgs/section_3.webp);
+  background-image: url(../imgs/section_3.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,8 +107,8 @@ header a {
 }
 
 .section-1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(/dist/imgs/section_1.jpeg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/dist/imgs/section_1.jpeg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../imgs/section_1.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imgs/section_1.jpeg);
 }
 
 .section-1 .u-clearfix {
@@ -223,8 +223,8 @@ header a {
 }
 
 .section-5 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/dist/imgs/section_5.jpeg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/dist/imgs/section_5.jpeg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../imgs/section_5.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imgs/section_5.jpeg);
   color: white;
 }
 
@@ -299,8 +299,8 @@ header a {
 }
 
 .section-7 {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/dist/imgs/section_7.jpeg);
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/dist/imgs/section_7.jpeg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../imgs/section_7.jpeg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imgs/section_7.jpeg);
   background-position: 50% 50%;
   color: white;
   /* */
