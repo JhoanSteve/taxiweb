@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="dist/css/style.css" >
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
     <meta name="Taxi Perú" 
-    data-s="siTaxi"
-    content="Taxi Peru,Con mas 3 años en el medio de transporte, contamos con la mas grande flota de taxis en el Perú. Para nosotros no hay mejor satisfacción que ver llegar a nuestros clientes con total seguridad asu destino."  />
+    content="Taxi Perú,Con mas 3 años en el medio de transporte, contamos con la mas grande flota de taxis en el Perú. Para nosotros no hay mejor satisfacción que ver llegar a nuestros clientes con total seguridad asu destino."  />
+   
+    <meta name="Taxi aeropuerto" 
+    content="taxi aeropuerto"/>
+
+    <meta name="Taxi Wendy" 
+    content="Taxi Wendy"/>
+    
     <meta name="Taxi Perú" 
-    data-s="siTaxi"
-    content="taxi aeropuerto"  />
+    content="Taxi Perú"/>
+
   </head>
 <body class="">
   <header class="">
@@ -99,30 +106,32 @@
                           </div>
                           <div class="col-lg-6 form-group">
                             <label>Nombres</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" name="first_name" class="form-control">
+                            <span class="text-danger error_first_name"></span>
                           </div>
                           <div class="col-lg-6 form-group">
                             <label>Apellidos</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" name="last_name" class="form-control">
+                            <span class="text-danger error_last_name"></span>
                           </div>
                           <div class="col-lg-12 form-group">
                             <label>Celular</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" name="phone" class="form-control">
+                            <span class="text-danger error_phone"></span>
                           </div>
                           <div class="col-lg-12 form-group d-none">
                             <label>Correo</label>
                             <input type="text" name="" class="form-control">
+                            <span class="text-danger error_message"></span>
                           </div>
                         
                           <div class="col-lg-12 form-group">
                             <label>Describe lo que necesitas</label>
-                            <textarea name="" id="" cols="30"   class="form-control">
-
-                            </textarea>
+                            <textarea name="message" cols="30"   class="form-control"></textarea>
                            
                           </div>
                           <div class="col-lg-12">
-                            <button class="btn btn-dark bg-dark w-100 py-3">Enviar</button>
+                            <button class="btn btn-dark bg-dark w-100 py-3 contact-btn" type="button" name="send">Enviar</button>
                           </div>
                         </div>
                       </div>
@@ -354,5 +363,77 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      //https://dashboard.emailjs.com/admin
+      // https://dashboard.emailjs.com/admin/integration
+      (function() {
+          emailjs.init('user_i5McFIVVnxw8ASYdC4VnE');
+      })();
+
+      let first_name = document.querySelector('input[name="first_name"]');
+      let last_name  = document.querySelector('input[name="last_name"]');
+      let phone      = document.querySelector('input[name="phone"]');
+      let message    = document.querySelector('textarea[name="message"]');
+
+
+      let error_first_name  = document.querySelector('.error_first_name');
+      let error_last_name   = document.querySelector('.error_last_name');
+      let error_phone       = document.querySelector('.error_phone');
+      let error_message     = document.querySelector('.error_message');
+
+      function validate()
+      {
+        error_first_name.innerHTML ='';
+        error_last_name.innerHTML ='';
+        error_phone.innerHTML ='';
+        error_message.innerHTML ='';
+
+        if(first_name.value.length <= 0){
+          error_first_name.innerHTML ='Campo requerido.';
+            return false;
+        }
+        
+        if(last_name.value.length <= 0){
+          error_last_name.innerHTML ='Campo requerido.';
+            return false;
+        }
+
+        if(phone.value.length <= 0){
+            error_phone.innerHTML ='Campo requerido.';
+            return false;
+        }
+
+        if(message.value.length <= 0){
+            error_message.innerHTML ='Campo requerido.';
+            return false;
+        }
+
+        return true;
+      }
+
+
+      function email_await()
+      {
+        document.querySelector('.contact-btn').onclick = function()
+        {
+              
+          if(!validate()) return;
+
+          emailjs.send("service_y77he9b","template_vf5gjfb",{
+          to_name: 'Jhoan Steve',
+          from_name: first_name.value + ' ' + last_name.value ,
+          phone: phone.value,
+          message: message.value,
+          });
+          console.log("dd");
+        }
+
+      }
+
+      email_await();
+
+    </script>
+
 </body>
 </html>
