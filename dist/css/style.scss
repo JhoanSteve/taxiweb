@@ -32,7 +32,7 @@ $color-dark : #1a1a1a;
 %img-yellow{
     background-attachment: fixed;
     
-    background-image: url(https://ld-wp73.template-help.com/wordpress/prod_26760/v1/wp-content/uploads/2019/11/Rectangle-43.png);
+    background-image: url(/dist/imgs/section_3.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +106,7 @@ header{
     font-weight: 800;
 }
 .section-1{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images01.nicepage.io/39/08/3908e0761ae2dff18854bc72f16b2918.jpeg);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/dist/imgs/section_1.jpeg);
 
     .u-clearfix{
         min-height: 236px;
@@ -236,7 +236,7 @@ header{
 
 
 .section-5{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images01.nicepage.io/55/4c/554ca73a505a43d2ded7129c5b2dcc54.jpeg);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/dist/imgs/section_5.jpeg);
     color: white;
     @extend %padding-default;
     @extend  %img-not-repeat;
@@ -321,7 +321,7 @@ header{
 }
 
 .section-7{
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images01.nicepage.io/73/59/73593d4ecae2df4d14109814a41b6d20.jpeg);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/dist/imgs/section_7.jpeg);
     background-position: 50% 50%;
     color: white;
     @extend  %img-not-repeat;
